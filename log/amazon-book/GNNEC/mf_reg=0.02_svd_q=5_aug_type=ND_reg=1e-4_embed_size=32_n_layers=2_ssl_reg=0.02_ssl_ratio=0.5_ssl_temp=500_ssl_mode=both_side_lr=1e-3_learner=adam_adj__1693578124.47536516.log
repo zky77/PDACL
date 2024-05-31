@@ -1,0 +1,74 @@
+2023-09-01 22:22:04.475: my pid: 12724
+2023-09-01 22:22:04.475: model: model.general_recommender.GNNEC
+2023-09-01 22:22:04.475: Dataset statistics:
+Name: amazon-book
+The number of users: 7928
+The number of items: 29346
+The number of ratings: 460224
+Average actions of users: 58.05
+Average actions of items: 15.68
+The sparsity of the dataset: 99.802186%
+
+The number of training: 417417
+The number of validation: 0
+The number of testing: 42807
+2023-09-01 22:22:04.476: NeuRec:[NeuRec]:
+recommender=GNNEC
+dataset=amazon-book
+file_column=UI
+sep=','
+gpu_id=0
+gpu_mem=0.99
+metric=["Precision", "Recall", "NDCG"]
+top_k=[20]
+test_thread=8
+test_batch_size=128
+seed=2021
+start_testing_epoch=0
+
+GNNEC:[hyperparameters]:
+mf_reg=0.02
+svd_q=5
+aug_type=ND
+reg=1e-4
+embed_size=32
+n_layers=2
+ssl_reg=0.02
+ssl_ratio=0.5
+ssl_temp=500
+ssl_mode=both_side
+lr=1e-3
+learner=adam
+adj_type=pre
+epochs=200
+batch_size=2048
+num_negatives=1
+param_init=xavier_uniform
+stddev=0.01
+verbose=1
+stop_cnt=10
+pretrain_flag=0
+save_flag=0
+
+Command line:
+recommender=GNNEC
+dataset=amazon-book
+epochs=200
+n_layers=2
+embed_size=32
+batch_size=2048
+lr=1e-3
+aug_type=ND
+reg=1e-4
+ssl_reg=0.02
+ssl_ratio=0.5
+ssl_temp=500
+mf_reg=0.02
+svd_q=5
+2023-09-01 22:22:25.668: metrics:	Precision@20	Recall@20   	NDCG@20     
+2023-09-01 22:22:37.142: [iter 1 : loss : 1.3953 = 0.6248 + 0.3852 + 0.0000 + 0.3852, time: 11.473385]
+2023-09-01 22:22:37.809: epoch 1:	0.00899341  	0.03370369  	0.02222217  
+2023-09-01 22:22:37.809: Find a better model.
+2023-09-01 22:22:48.830: [iter 2 : loss : 1.2322 = 0.4617 + 0.3852 + 0.0001 + 0.3852, time: 11.003814]
+2023-09-01 22:22:49.540: epoch 2:	0.00932768  	0.03524556  	0.02331702  
+2023-09-01 22:22:49.540: Find a better model.

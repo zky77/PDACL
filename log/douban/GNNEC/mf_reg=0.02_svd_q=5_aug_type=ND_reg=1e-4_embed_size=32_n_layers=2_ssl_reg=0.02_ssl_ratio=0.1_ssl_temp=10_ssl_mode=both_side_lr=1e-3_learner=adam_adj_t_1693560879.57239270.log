@@ -1,0 +1,95 @@
+2023-09-01 17:34:39.572: my pid: 25321
+2023-09-01 17:34:39.572: model: model.general_recommender.GNNEC
+2023-09-01 17:34:39.573: Dataset statistics:
+Name: douban
+The number of users: 2765
+The number of items: 26926
+The number of ratings: 882145
+Average actions of users: 319.04
+Average actions of items: 32.76
+The sparsity of the dataset: 98.815124%
+
+The number of training: 795166
+The number of validation: 0
+The number of testing: 86979
+2023-09-01 17:34:39.573: NeuRec:[NeuRec]:
+recommender=GNNEC
+dataset=douban
+file_column=UI
+sep=','
+gpu_id=0
+gpu_mem=0.99
+metric=["Precision", "Recall", "NDCG"]
+top_k=[20]
+test_thread=8
+test_batch_size=128
+seed=2021
+start_testing_epoch=0
+
+GNNEC:[hyperparameters]:
+mf_reg=0.02
+svd_q=5
+aug_type=ND
+reg=1e-4
+embed_size=32
+n_layers=2
+ssl_reg=0.02
+ssl_ratio=0.1
+ssl_temp=10
+ssl_mode=both_side
+lr=1e-3
+learner=adam
+adj_type=pre
+epochs=200
+batch_size=2048
+num_negatives=1
+param_init=xavier_uniform
+stddev=0.01
+verbose=1
+stop_cnt=10
+pretrain_flag=0
+save_flag=0
+
+Command line:
+recommender=GNNEC
+dataset=douban
+epochs=200
+n_layers=2
+embed_size=32
+batch_size=2048
+lr=1e-3
+aug_type=ND
+reg=1e-4
+ssl_reg=0.02
+ssl_ratio=0.1
+ssl_temp=10
+mf_reg=0.02
+svd_q=5
+2023-09-01 17:34:51.860: metrics:	Precision@20	Recall@20   	NDCG@20     
+2023-09-01 17:35:20.443: [iter 1 : loss : 1.2391 = 0.5227 + 0.3582 + 0.0001 + 0.3581, time: 28.582467]
+2023-09-01 17:35:20.718: epoch 1:	0.08065914  	0.06006593  	0.10438368  
+2023-09-01 17:35:20.718: Find a better model.
+2023-09-01 17:35:48.794: [iter 2 : loss : 1.0464 = 0.3374 + 0.3546 + 0.0004 + 0.3540, time: 28.039487]
+2023-09-01 17:35:49.065: epoch 2:	0.07902246  	0.05856618  	0.10279138  
+2023-09-01 17:36:17.248: [iter 3 : loss : 1.0050 = 0.2972 + 0.3540 + 0.0006 + 0.3532, time: 28.147146]
+2023-09-01 17:36:17.542: epoch 3:	0.07794462  	0.05807203  	0.10231777  
+2023-09-01 17:36:45.276: [iter 4 : loss : 0.9822 = 0.2750 + 0.3537 + 0.0007 + 0.3529, time: 27.696666]
+2023-09-01 17:36:45.544: epoch 4:	0.07718612  	0.05766103  	0.10174263  
+2023-09-01 17:37:13.562: [iter 5 : loss : 0.9658 = 0.2589 + 0.3534 + 0.0008 + 0.3527, time: 27.977008]
+2023-09-01 17:37:13.818: epoch 5:	0.07726593  	0.05786499  	0.10162992  
+2023-09-01 17:37:41.609: [iter 6 : loss : 0.9557 = 0.2489 + 0.3533 + 0.0009 + 0.3526, time: 27.760323]
+2023-09-01 17:37:41.881: epoch 6:	0.07670707  	0.05757086  	0.10124315  
+2023-09-01 17:38:09.974: [iter 7 : loss : 0.9474 = 0.2408 + 0.3531 + 0.0011 + 0.3525, time: 28.057205]
+2023-09-01 17:38:10.238: epoch 7:	0.07678694  	0.05782738  	0.10135383  
+2023-09-01 17:38:38.031: [iter 8 : loss : 0.9392 = 0.2327 + 0.3530 + 0.0012 + 0.3524, time: 27.761739]
+2023-09-01 17:38:38.286: epoch 8:	0.07654744  	0.05703042  	0.10091100  
+2023-09-01 17:39:06.358: [iter 9 : loss : 0.9303 = 0.2240 + 0.3528 + 0.0013 + 0.3522, time: 28.042987]
+2023-09-01 17:39:06.638: epoch 9:	0.07720608  	0.05814127  	0.10161684  
+2023-09-01 17:39:34.803: [iter 10 : loss : 0.9242 = 0.2181 + 0.3526 + 0.0014 + 0.3521, time: 28.131503]
+2023-09-01 17:39:35.072: epoch 10:	0.07818412  	0.05741131  	0.10208197  
+2023-09-01 17:40:03.191: [iter 11 : loss : 0.9164 = 0.2106 + 0.3524 + 0.0015 + 0.3519, time: 28.081329]
+2023-09-01 17:40:03.472: epoch 11:	0.07878292  	0.05876968  	0.10269119  
+2023-09-01 17:40:03.472: Early stopping is trigger at epoch: 11
+2023-09-01 17:40:03.472: best_result@epoch 1:
+
+2023-09-01 17:40:03.472: 		0.0807      	0.0601      	0.1044      
